@@ -4,6 +4,21 @@ STRING notepad
 DELAY 1000
 ENTER
 DELAY 1000
+STRING  ___   _   _    ___   _  __     __  __   ___    _   _
+ENTER
+HOME
+STRING | __| | | | |  / __| | |/ /	\ \/ /  / _ \  | | | |
+ENTER
+HOME
+STRING | _|  | |_| | | |__  |   |	 |  |  | |_| | | |_| |
+ENTER
+HOME
+STRING |_|    \___/   \___| |_|\_\	 |__|   \___/   \___/
+ENTER
+HOME
+STRINGLN  
+ENTER
+HOME
 STRING 		 FUCK YOU!				
 ENTER
 HOME
@@ -19,7 +34,7 @@ HOME
 STRING 	     /               \				
 ENTER
 HOME
-STRING 	     |__	   __|				
+STRING 	     |_	   	    _|		
 ENTER
 HOME
 STRING 	       |	   |				
