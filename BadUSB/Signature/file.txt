@@ -1,0 +1,48 @@
+GUI r
+DELAY 1000
+STRING notepad
+DELAY 1000
+ENTER
+DELAY 1000
+STRING thereal#3651
+ENTER
+HOME
+STRING  
+ENTER
+HOME
+STRING     _      _                                     _
+ENTER
+HOME
+STRING  __| |__  | |       ___   _ __    ___    _____  | |
+ENTER
+HOME
+STRING |__   __| | |__    / __\ | | _|  / __\  / __  | | |
+ENTER
+HOME
+STRING    | |    |  _  \ | \__  |  /   | \__  | |__| | | |__
+ENTER
+HOME
+STRING    |_|    |_| |_|  \___/ |_|     \___/  \__/|_|  \___|
+ENTER
+HOME
+STRING  
+ENTER
+HOME
+STRING  ___     ____    _____    ____
+ENTER
+HOME
+STRING |___ \  / ___|  |  ___|  /__  |
+ENTER
+HOME
+STRING  __| | | |___   | |___     |  |
+ENTER
+HOME
+STRING |___ | |  _  \  |___  \    |  |
+ENTER
+HOME
+STRING  __| | | |_|  |  ___|  |  _|  |_
+ENTER
+HOME
+STRING |____/  \____/  |_____/  |______|
+ENTER
+HOME
