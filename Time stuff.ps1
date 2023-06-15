@@ -17,7 +17,34 @@ $Hour = (Get-Date).Hour
 $Minute = (Get-Date).Minute
 $Second = (Get-Date).Second
 $Millisecond = (Get-Date).Millisecond
+function OpenYearDetailed {
+    Switch($Script:YearMode) {
+        1 {
+            Write-Host 1
+            $Script:RightYearButton.Text = (-join((Get-Date).Year, " Years"))
+            $Script:RightMonthsLabel.Text = (-join((Get-Date).Month, " Months"))
+            $Script:RightDaysLabel.Text = (-join((Get-Date).Day, " Days"))
+            $Script:RightMinutesLabel.Text = (-join((Get-Date).Minute, " Minutes"))
+            $Script:RightSecondsLabel.Text = (-join((Get-Date).Second, " Seconds"))
+            $Script:RightMilliSecondsLabel.Text = (-join((Get-Date).Millisecond, " Milliseconds"))
 
+        }
+        2 {
+            Write-Host 2
+            $Script:RightYearButton.Text = ''
+        }
+        3 {
+            Write-Host 3
+        }
+
+    }
+    if($Script:YearMode -eq 3) {
+        $Script:YearMode = 1
+    } else {
+        $Script:YearMode++
+    }
+
+}
 
 $Form = New-Object $FormObject
 $Form.Text = 'My first project that actually does something cool'
@@ -96,33 +123,7 @@ $RightMilliSecondsLabel.Text = (-join("$MilliSecond", " Milliseconds"))
 $RightMilliSecondsLabel.BackColor = 'white'
 
 
-function OpenYearDetailed {
-    Switch($Script:YearMode) {
-        1 {
-            $Script:RightYearButton.Text = (-join("$Year", " Years"))
-            $Script:RightMonthsLabel.Text = (-join("$Month", " Months"))
-            $Script:RightDaysLabel.Text = (-join("$DayOfMonth", " Days"))
-            $Script:RightDaysLabel.Text = (-join("$DayOfMonth", " Days"))
-            $Script:RightMinutesLabel.Text = (-join("$Minute", " Minutes"))
-            $Script:RightSecondsLabel.Text = (-join("$Second", " Seconds"))
-            $Script:RightMilliSecondsLabel.Text = (-join("$MilliSecond", " Milliseconds"))
 
-        }
-        2 {
-            Write-Host 2
-        }
-        3 {
-            Write-Host 3
-        }
-
-    }
-    if($Script:YearMode -eq 3) {
-        $Script:YearMode = 1
-    } else {
-        $Script:YearMode++
-    }
-
-}
 
 $Form.Controls.AddRange(@($RightYearButton, $RightMonthsLabel, $DateLabel, $NumberLabel, $RightDaysLabel, $RightHoursLabel, $RightMinutesLabel, $RightSecondsLabel, $RightMilliSecondsLabel))
 $Form.ShowDialog()
