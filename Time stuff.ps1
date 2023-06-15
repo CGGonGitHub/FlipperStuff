@@ -124,23 +124,19 @@ $RightMilliSecondsLabel.BackColor = 'white'
 
 
 
-
 $Form.Controls.AddRange(@($RightYearButton, $RightMonthsLabel, $DateLabel, $NumberLabel, $RightDaysLabel, $RightHoursLabel, $RightMinutesLabel, $RightSecondsLabel, $RightMilliSecondsLabel))
 $Form.ShowDialog()
 $Form.Dispose()
 
-#while( $true) {
-#    $Hour = (Get-Date).Hour
-#    $Minute = (Get-Date).Minute
-#    $Second = (Get-Date).Second
-#    $Millisecond = (Get-Date).Millisecond
-#
-#
-#    $finalNumber = (-join("$Hour",":","$Minute",":","$Second",":","$Millisecond"))
-#    $Script:NumberLabel.Text = $finalNumber
-#}
 
 #Modes:
 #How far we are
 #Total of ever
 #Total of year
+
+#$val = $true
+#while($val -eq $true) {
+#    $finalNumber = (-join((Get-Date).Hour,":",(Get-Date).Minute,":",(Get-Date).Second,":",(Get-Date).Millisecond))
+#    $Script:NumberLabel.Text = $finalNumber
+#    Write-Host $finalNumber
+#}
