@@ -45,61 +45,68 @@ $Script:NumberLabel.Text = $finalNumber
 
 # Right Side
 #Year
-$YearButton = New-Object $LabelObject
-$YearButton.Location = New-Object System.Drawing.Point(550, 40)
-$YearButton.Text = (-join("$Year", " Years"))
-$YearButton.ClientSize = '240, 45'
-$YearButton.Font = 'Comic Sans MS, 30'
-$YearButton.BackColor = 'white'
-$YearButton.Add_Click({OpenYearDetailed})
+$Script:RightYearButton = New-Object $LabelObject
+$Script:RightYearButton.Location = New-Object System.Drawing.Point(550, 40)
+$Script:RightYearButton.Text = (-join("$Year", " Years"))
+$Script:RightYearButton.ClientSize = '240, 45'
+$Script:RightYearButton.Font = 'Comic Sans MS, 30'
+$Script:RightYearButton.BackColor = 'white'
+$Script:RightYearButton.Add_Click({OpenYearDetailed})
 
-$YearMonthsLabel = New-Object $LabelObject
-$YearMonthsLabel.Location = New-Object System.Drawing.Point(625, 90)
-$YearMonthsLabel.ClientSize = '165, 45'
-$YearMonthsLabel.Font = 'Comic Sans MS, 25'
-$YearMonthsLabel.Text = (-join("$Month", " Months"))
-$YearMonthsLabel.BackColor = 'white'
+$Script:RightMonthsLabel = New-Object $LabelObject
+$Script:RightMonthsLabel.Location = New-Object System.Drawing.Point(625, 90)
+$Script:RightMonthsLabel.ClientSize = '165, 45'
+$Script:RightMonthsLabel.Font = 'Comic Sans MS, 25'
+$Script:RightMonthsLabel.Text = (-join("$Month", " Months"))
+$Script:RightMonthsLabel.BackColor = 'white'
 
-$YearDaysLabel = New-Object $LabelObject
-$YearDaysLabel.Location = New-Object System.Drawing.Point(660, 140)
-$YearDaysLabel.ClientSize = '130, 45'
-$YearDaysLabel.Font = 'Comic Sans MS, 23'
-$YearDaysLabel.Text = (-join("$DayOfMonth", " Days"))
-$YearDaysLabel.BackColor = 'white'
+$Script:RightDaysLabel = New-Object $LabelObject
+$Script:RightDaysLabel.Location = New-Object System.Drawing.Point(660, 140)
+$Script:RightDaysLabel.ClientSize = '130, 45'
+$Script:RightDaysLabel.Font = 'Comic Sans MS, 23'
+$Script:RightDaysLabel.Text = (-join("$DayOfMonth", " Days"))
+$Script:RightDaysLabel.BackColor = 'white'
 
-$YearHoursLabel = New-Object $LabelObject
-$YearHoursLabel.Location = New-Object System.Drawing.Point(675, 190)
-$YearHoursLabel.ClientSize = '115, 45'
-$YearHoursLabel.Font = 'Comic Sans MS, 20'
-$YearHoursLabel.Text = (-join("$Hour", " Hours"))
-$YearHoursLabel.BackColor = 'white'
+$Script:RightHoursLabel = New-Object $LabelObject
+$Script:RightHoursLabel.Location = New-Object System.Drawing.Point(675, 190)
+$Script:RightHoursLabel.ClientSize = '115, 45'
+$Script:RightHoursLabel.Font = 'Comic Sans MS, 20'
+$Script:RightHoursLabel.Text = (-join("$Hour", " Hours"))
+$Script:RightHoursLabel.BackColor = 'white'
 
-$YearMinutesLabel = New-Object $LabelObject
-$YearMinutesLabel.Location = New-Object System.Drawing.Point(675, 240)
-$YearMinutesLabel.ClientSize = '115, 35'
-$YearMinutesLabel.Font = 'Comic Sans MS, 15'
-$YearMinutesLabel.Text = (-join("$Minute", " Minutes"))
-$YearMinutesLabel.BackColor = 'white'
+$Script:RightMinutesLabel = New-Object $LabelObject
+$Script:RightMinutesLabel.Location = New-Object System.Drawing.Point(675, 240)
+$Script:RightMinutesLabel.ClientSize = '115, 35'
+$Script:RightMinutesLabel.Font = 'Comic Sans MS, 15'
+$Script:RightMinutesLabel.Text = (-join("$Minute", " Minutes"))
+$RightMinutesLabel.BackColor = 'white'
 
-$YearSecondsLabel = New-Object $LabelObject
-$YearSecondsLabel.Location = New-Object System.Drawing.Point(685, 280)
-$YearSecondsLabel.ClientSize = '105, 30'
-$YearSecondsLabel.Font = 'Comic Sans MS, 13'
-$YearSecondsLabel.Text = (-join("$Second", " Seconds"))
-$YearSecondsLabel.BackColor = 'white'
+$Script:RightSecondsLabel = New-Object $LabelObject
+$Script:RightSecondsLabel.Location = New-Object System.Drawing.Point(685, 280)
+$Script:RightSecondsLabel.ClientSize = '105, 30'
+$Script:RightSecondsLabel.Font = 'Comic Sans MS, 13'
+$Script:RightSecondsLabel.Text = (-join("$Second", " Seconds"))
+$Script:RightSecondsLabel.BackColor = 'white'
 
-$YearMilliSecondsLabel = New-Object $LabelObject
-$YearMilliSecondsLabel.Location = New-Object System.Drawing.Point(675, 315)
-$YearMilliSecondsLabel.ClientSize = '115, 30'
-$YearMilliSecondsLabel.Font = 'Comic Sans MS, 10'
-$YearMilliSecondsLabel.Text = (-join("$MilliSecond", " Milliseconds"))
-$YearMilliSecondsLabel.BackColor = 'white'
+$RightMilliSecondsLabel = New-Object $LabelObject
+$RightMilliSecondsLabel.Location = New-Object System.Drawing.Point(675, 315)
+$RightMilliSecondsLabel.ClientSize = '115, 30'
+$RightMilliSecondsLabel.Font = 'Comic Sans MS, 10'
+$RightMilliSecondsLabel.Text = (-join("$MilliSecond", " Milliseconds"))
+$RightMilliSecondsLabel.BackColor = 'white'
 
 
 function OpenYearDetailed {
     Switch($Script:YearMode) {
         1 {
-            Write-Host 1
+            $Script:RightYearButton.Text = (-join("$Year", " Years"))
+            $Script:RightMonthsLabel.Text = (-join("$Month", " Months"))
+            $Script:RightDaysLabel.Text = (-join("$DayOfMonth", " Days"))
+            $Script:RightDaysLabel.Text = (-join("$DayOfMonth", " Days"))
+            $Script:RightMinutesLabel.Text = (-join("$Minute", " Minutes"))
+            $Script:RightSecondsLabel.Text = (-join("$Second", " Seconds"))
+            $Script:RightMilliSecondsLabel.Text = (-join("$MilliSecond", " Milliseconds"))
+
         }
         2 {
             Write-Host 2
@@ -117,7 +124,7 @@ function OpenYearDetailed {
 
 }
 
-$Form.Controls.AddRange(@($YearButton, $YearMonthsLabel, $DateLabel, $NumberLabel, $YearDaysLabel, $YearHoursLabel, $YearMinutesLabel, $YearSecondsLabel, $YearMilliSecondsLabel))
+$Form.Controls.AddRange(@($RightYearButton, $RightMonthsLabel, $DateLabel, $NumberLabel, $RightDaysLabel, $RightHoursLabel, $RightMinutesLabel, $RightSecondsLabel, $RightMilliSecondsLabel))
 $Form.ShowDialog()
 $Form.Dispose()
 
