@@ -17,6 +17,7 @@ $Hour = (Get-Date).Hour
 $Minute = (Get-Date).Minute
 $Second = (Get-Date).Second
 $Millisecond = (Get-Date).Millisecond
+
 function OpenYearDetailed {
     Switch($Script:YearMode) {
         1 {
@@ -45,6 +46,10 @@ function OpenYearDetailed {
     }
 
 }
+#Modes:
+#How far we are
+#Total of ever
+#Total of year
 
 $Form = New-Object $FormObject
 $Form.Text = 'My first project that actually does something cool'
@@ -129,10 +134,7 @@ $Form.ShowDialog()
 $Form.Dispose()
 
 
-#Modes:
-#How far we are
-#Total of ever
-#Total of year
+
 
 #$val = $true
 #while($val -eq $true) {
